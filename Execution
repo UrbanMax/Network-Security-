@@ -1,0 +1,98 @@
+Security Control Types
+
+1. Walls, bollards, fences, guard dogs, cameras, and lighting are what type of security control?
+Answer: Physical security controls
+
+2. Security awareness programs, BYOD policies, and ethical hiring practices are what type of security control?
+Answer: Administrative or organizational security controls
+
+3. Encryption, biometric fingerprint readers, firewalls, endpoint security, and intrusion detection systems are what type of security control?
+Answer: Technical or logical security controls
+
+Intrusion Detection and Attack Indicators
+
+1. What’s the difference between an IDS and an IPS?
+Answer: IDS (Intrusion Detection System) detects and alerts about potential security incidents, while IPS (Intrusion Prevention System) not only detects but also actively blocks or mitigates threats.
+
+2. What’s the difference between an indicator of attack (IOA) and an indicator of compromise (IOC)?
+Answer: IOA (Indicator of Attack) signifies potential malicious activity based on tactics and techniques, whereas IOC (Indicator of Compromise) indicates a confirmed security breach or compromise.
+
+The Cyber Kill Chain
+1. Name the seven stages of the cyber kill chain, and provide a brief example of each.
+Answer:
+
+Reconnaissance: Gathering information about the target (e.g., scanning for open ports).
+
+Weaponization: Developing or acquiring malicious tools (e.g., crafting a malware payload).
+
+Delivery: Transmitting the weaponized payload to the target (e.g., sending a phishing email).
+
+Exploitation: Taking advantage of vulnerabilities in the target's system (e.g., exploiting a software flaw).
+
+Installation: Placing the malware on the target system (e.g., dropping and executing the payload).
+
+Command and Control: Establishing communication channels for remote control (e.g., connecting to a C2 server).
+
+Actions on Objectives: Accomplishing the attacker's goals (e.g., exfiltrating sensitive data).
+
+Snort Rule Analysis
+1. Break down the Snort rule header and explain what this rule does.
+Answer: This Snort rule (ET SCAN Potential VNC Scan 5800-5820) detects and alerts potential scanning activity targeting VNC services on ports 5800 to 5820.
+
+2. What stage of the cyber kill chain does the alerted activity violate?
+Answer: The alerted activity likely violates the "Reconnaissance" stage of the cyber kill chain.
+
+3. What kind of attack is indicated?
+Answer: The rule indicates someone attempting to scan for VNC services, potentially as a precursor to a more significant attack.
+
+
+Part 2: "Drop Zone" Lab
+The lab activities provided involve setting up and configuring firewalld zones, interfaces, services, and rules. The tasks include enabling firewalld, creating custom zones, adding interfaces to zones, configuring service permissions, blocking specific IP addresses, and verifying firewall rule configurations.
+
+Part 3: IDS, IPS, DiD and Firewalls
+IDS vs. IPS Systems
+
+1. Name and define two ways an IDS connects to a network.
+Answer: Network TAPs (Test Access Points): IDS passively monitors network traffic by tapping into network segments.
+SPAN ports (Switched Port Analyzer): IDS connects to switch ports configured to mirror traffic for analysis.
+
+2. Describe how an IPS connects to a network.
+Answer: IPS can connect in two primary ways:
+Inline Mode: Directly in the traffic path, actively blocking or allowing traffic based on predefined rules.
+Promiscuous Mode: Passive monitoring mode similar to IDS, but with the capability to take active measures upon detection.
+
+3. What type of IDS compares patterns of traffic to predefined signatures and is unable to detect zero-day attacks?
+Answer: Signature-based IDS
+
+4. What type of IDS is beneficial for detecting all suspicious traffic that deviates from the well-known baseline and is excellent at detecting when an attacker probes or sweeps a network?
+Answer: Anomaly-based IDS
+
+Defense in Depth
+Scenarios and Layers of Defense:
+
+A criminal hacker tailgates an employee through an exterior door into a secured facility: Physical security layer
+A zero-day goes undetected by antivirus software: Application Security Layer
+A criminal successfully gains access to HR’s database: Database Security Layer
+A criminal hacker exploits a vulnerability within an operating system: Host Security Layer
+A hacktivist organization successfully performs a DDoS attack, taking down a government website: Network Security Layer
+
+Data is classified at the wrong classification level: Data Security Layer
+
+A state-sponsored hacker group successfully firewalked an organization to produce a list of active services on an email server: Network Security Layer
+
+Firewall Architectures and Methodologies
+
+1. Which type of firewall verifies the three-way TCP handshake?
+Answer: Stateful firewall
+
+2. Which type of firewall considers the connection as a whole?
+Answer: Stateful firewall
+
+3. Which type of firewall intercepts all traffic prior to forwarding it to its final destination?
+Answer: Proxy firewall
+
+4. Which type of firewall examines data within a packet as it progresses through a network interface by examining source and destination IP address, port number, and packet type—all without opening the packet to inspect its contents?
+Answer: Stateful firewall
+
+5. Which type of firewall filters solely based on source and destination MAC address?
+Answer: MAC filtering firewall
